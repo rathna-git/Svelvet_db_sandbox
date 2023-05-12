@@ -2,8 +2,14 @@
     import {Node, Anchor} from 'svelvet';
   </script>
   <!-- bgColor='#dff7df' -->
-  <Node  useDefaults id='pilot' position={{x:5, y:5}}>
+  <Node  useDefaults id='pilot' position={{x:-300, y:300}}>
     <div class='nodeWrapper'>
+      <div class='p_1'>
+        <Anchor  id='pilots_anchor1'connections={[['user', 'userAnchor']]} input></Anchor>
+        </div>
+        <div class='p_2'>
+          <Anchor id='pilots_anchor2' connections={[['user', 'userAnchor']]} input></Anchor>
+        </div>
     <div id='container'>
       <div id='heading'>Pilots</div>
       <table id="pilotTable">
@@ -24,9 +30,7 @@
          </tr>
       </table>
     </div>
-    <div class='outputAnchor'>
-    <Anchor connections={[['user', 'userAnchor']]} output></Anchor>
-    </div>
+   
   </div>  
   </Node>
   
@@ -46,13 +50,21 @@
       gap: 10px;
     }
 
-.outputAnchor{
+.p_1{
         position: absolute;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        bottom: -14px;
-        left: 36px;
+        top: 83px;
+        left: -16px;
+    }
+    .p_2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 123px;
+        left: -16px;
     }
   
   #heading{

@@ -2,8 +2,11 @@
     import {Node, Anchor} from 'svelvet';
   </script>
   <!-- bgColor='#dff7df' -->
-  <Node  useDefaults id='species_in_films' position={{x:5, y:5}}>
+  <Node  useDefaults id='species_in_films' position={{x:700, y:0}}>
     <div class='nodeWrapper'>
+      <div class='p_1'>
+        <Anchor input></Anchor>
+      </div>
     <div id='container'>
       <div id='heading'>Species in Films</div>
       <table id="species_filmsTable">
@@ -24,8 +27,8 @@
          </tr>
       </table>
     </div>
-    <div class='outputAnchor'>
-    <Anchor connections={[['user', 'userAnchor']]} output></Anchor>
+    <div class='p_2'>
+    <Anchor input></Anchor>
     </div>
   </div>  
   </Node>
@@ -46,13 +49,22 @@
       gap: 10px;
     }
 
-.outputAnchor{
+    .p_1{
         position: absolute;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        bottom: -14px;
-        left: 36px;
+        top: 52px;
+        left: -16px;
+    }
+
+    .p_2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 80px;
+        right: -14px;
     }
   
   #heading{

@@ -2,10 +2,16 @@
     import {Node, Anchor} from 'svelvet';
 </script>
 <!-- bgColor='#f2fcff'  -->
-<Node  useDefaults id='species' position={{x:500, y:100}}>
+<Node  useDefaults id='species' position={{x:225, y:-250}}>
  <div class="nodeWrapper">
-    <div class='inputAnchor'>
-        <Anchor input id='speciesAnchor'></Anchor>
+    <div class='p_1'>
+        <Anchor output id='species_anchor1'></Anchor>
+    </div>
+    <div class='p_2'>
+        <Anchor output id='species_anchor2'></Anchor>
+    </div>
+    <div class='p_3'>
+        <Anchor input id='species_anchor3'></Anchor>
     </div>
     <div id=container>
         <div id='heading'>Species</div>
@@ -85,12 +91,28 @@
       gap: 10px;
     }
 
-    .inputAnchor{
+    .p_1{
         position: absolute;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        top: 92px;
+        top: 52px;
+        left: -16px;
+    }
+    .p_2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 50px;
+        right: -14px;
+    }
+    .p_3{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 400px;
         left: -16px;
     }
     #heading{

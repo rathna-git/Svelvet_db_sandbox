@@ -9,10 +9,14 @@
   import PeopleFilms from './lib/tables/People_in_films.svelte';
   import SpeciesFilms from './lib/tables/Species_in_films.svelte';
   import SpeciesInFilms from './lib/tables/Species_in_films.svelte';
+  import PlanetsInFilms from './lib/tables/Planets_in_films.svelte';
+  import VesselsInFilms from './lib/tables/Vessels_in_films.svelte';
+  import Films from './lib/tables/Films.svelte';
 
+  let zoom = 0.5;
 </script>
 <body>
-  <Svelvet controls minimap >
+  <Svelvet controls minimap {zoom}>
     <Vessel/>
     <People/>
     <Pilot/>
@@ -21,6 +25,9 @@
     <Starship/>
     <PeopleFilms/>
     <SpeciesInFilms/>
+    <PlanetsInFilms/>
+    <VesselsInFilms/>
+    <Films/>
     <ThemeToggle main='light' alt='dark' slot='toggle'/>
   </Svelvet>
 </body>
@@ -31,8 +38,8 @@
 		justify-content: center;
 		align-items: center;
 		background-color: gray;
-		width: 95vw;
-		height: 95vh;
+		width: 100vw;
+		height: 100vh;
 		padding: 0;
 		margin: 0;
 	}

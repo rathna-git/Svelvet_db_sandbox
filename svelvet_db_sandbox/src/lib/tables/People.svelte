@@ -2,10 +2,13 @@
     import {Node, Anchor} from 'svelvet';
 </script>
 <!-- bgColor='#f2fcff'  -->
-<Node  useDefaults id='people' position={{x:500, y:100}}>
+<Node  useDefaults id='people' position={{x:-300, y:-300}}>
  <div class="nodeWrapper">
-    <div class='inputAnchor'>
-        <Anchor input id='peopleAnchor'></Anchor>
+    <div class='p_1'>
+        <Anchor output id='people_anchor1'></Anchor>
+    </div>
+    <div class='p_2'>
+        <Anchor output id='people_anchor2'></Anchor>
     </div>
     <div id=container>
         <div id='heading'>People</div>
@@ -66,8 +69,12 @@
             <td></td>
         </tr>
     </table>
-
-
+    <div class="p_3">
+        <Anchor id='people_anchor3' input></Anchor>
+    </div>
+    <div class="p_4">
+        <Anchor id='people_anchor4' input></Anchor>
+    </div>
 </div>
 
 </div>
@@ -90,14 +97,40 @@
       gap: 10px;
     }
 
-    .inputAnchor{
+    .p_1{
         position: absolute;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        top: 92px;
+        top: 52px;
         left: -16px;
     }
+    .p_2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 50px;
+        right: -14px;
+    }
+    .p_3{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 360px;
+        right: -14px;
+    }
+   
+    .p_4{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 400px;
+        right: -14px;
+    }
+    
     #heading{
         display: flex;
         justify-content: center;

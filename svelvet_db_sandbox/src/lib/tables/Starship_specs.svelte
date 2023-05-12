@@ -2,8 +2,11 @@
     import {Node, Anchor} from 'svelvet';
   </script>
   <!-- bgColor='#dff7df' -->
-  <Node  useDefaults id='starship' position={{x:5, y:5}}>
+  <Node  useDefaults id='starship' position={{x:225, y:300}}>
     <div class='nodeWrapper'>
+      <div class='p_1'>
+        <Anchor id='vessel_anchor1' connections={[['user', 'userAnchor']]} input></Anchor>
+      </div>
     <div id='container'>
       <div id='heading'>Starship Specs</div>
       <table id="starshipTable">
@@ -29,9 +32,7 @@
          </tr>
       </table>
     </div>
-    <div class='outputAnchor'>
-    <Anchor connections={[['user', 'userAnchor']]} output></Anchor>
-    </div>
+    
   </div>  
   </Node>
   
@@ -51,13 +52,13 @@
       gap: 10px;
     }
 
-.outputAnchor{
+.p_1{
         position: absolute;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        bottom: -14px;
-        left: 36px;
+        top: 154px;
+        left: -16px;
     }
   
   #heading{

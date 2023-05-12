@@ -2,8 +2,11 @@
     import {Node, Anchor} from 'svelvet';
   </script>
   <!-- bgColor='#dff7df' -->
-  <Node  useDefaults id='people_in_films' position={{x:5, y:5}}>
+  <Node  useDefaults id='people_in_films' position={{x:700, y:-300}}>
     <div class='nodeWrapper'>
+      <div class='p_1'>
+        <Anchor input></Anchor>
+      </div>
     <div id='container'>
       <div id='heading'>People in Films</div>
       <table id="people_filmsTable">
@@ -24,8 +27,8 @@
          </tr>
       </table>
     </div>
-    <div class='outputAnchor'>
-    <Anchor connections={[['user', 'userAnchor']]} output></Anchor>
+    <div class='p_2'>
+    <Anchor input></Anchor>
     </div>
   </div>  
   </Node>
@@ -46,36 +49,45 @@
       gap: 10px;
     }
 
-.outputAnchor{
+    .p_1{
         position: absolute;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        bottom: -14px;
-        left: 36px;
+        top: 66px;
+        left: -16px;
+    }
+
+    .p_2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 120px;
+        right: -14px;
     }
   
-  #heading{
-          display: flex;
-          justify-content: center;
-          background-color: rgb(247, 108, 108);
-          padding: 10px;
-          font-size: 18px;
-          font-weight: 600;
-          border-top-right-radius: 8px;
-          border-top-left-radius: 8px;
-      }
+    #heading{
+        display: flex;
+        justify-content: center;
+        background-color: rgb(247, 108, 108);
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
       
     #people_filmsTable td{
         width: 70px;
-          margin: 0px;
-          padding: 8px;
-          justify-content: space-evenly;
-          border-bottom: 1px solid gray;
-          border-right: 1px solid gray;
+        margin: 0px;
+        padding: 8px;
+        justify-content: space-evenly;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
     }
   
     #people_filmsTable td:last-child {       
-          border-right: none;
-      }
+        border-right: none;
+    }
   </style>

@@ -2,11 +2,9 @@
   import {Node, Anchor} from 'svelvet';
 </script>
 <!-- bgColor='#fae8e8' -->
-<Node useDefaults id='vessel' position={{x:200, y:20}}>
+<Node useDefaults id='vessel' position={{x:-300, y:600}}>
   <div class="nodeWrapper">
-    <div class='inputAnchor'>
-      <Anchor id='vesselAnchor' input></Anchor>
-    </div>
+    
     <div id='container'>
       <div id='heading'>Vessels</div>
       <table id="vesselTable">
@@ -77,9 +75,12 @@
         </tr>
       </table>
     </div>
-    <div class='outputAnchor'>
-      <Anchor connections={[['people','peopleAnchor']]} output></Anchor>
-    </div> 
+    <div class='p_1'>
+      <Anchor id='vessel_anchor1' output></Anchor>
+    </div>
+    <div class='p_2'>
+      <Anchor id='vessel_anchor2' connections={[['people','peopleAnchor']]} output></Anchor>
+    </div>   
   </div>
 </Node>
 
@@ -99,7 +100,7 @@
   gap: 10px;
 }
 
-.inputAnchor{
+.p_1{
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -108,7 +109,7 @@
         left: -16px;
 }
 
-.outputAnchor{
+.p_2{
         position: absolute;
         display: flex;
         flex-direction: column;

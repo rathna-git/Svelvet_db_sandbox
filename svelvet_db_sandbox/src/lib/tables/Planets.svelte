@@ -2,11 +2,14 @@
     import {Node, Anchor} from 'svelvet';
 </script>
 <!-- bgColor='#f2fcff'  -->
-<Node  useDefaults id='planets' position={{x:500, y:100}}>
+<Node  useDefaults id='planets' position={{x:240, y:600}}>
  <div class="nodeWrapper">
-    <div class='inputAnchor'>
-        <Anchor input id='planetsAnchor'></Anchor>
+    <div class='p_1'>
+        <Anchor output id='planets_anchor1'></Anchor>
     </div>
+    <div class='p_2'>
+        <Anchor id='plannets_anchor2' connections={[['people','peopleAnchor']]} output></Anchor>
+      </div> 
     <div id=container>
         <div id='heading'>Planets</div>
             <table id="planetsTable">
@@ -74,8 +77,6 @@
 </Node>
 
 
-
-
 <style>
      .nodeWrapper{
       box-sizing: border-box;
@@ -90,14 +91,22 @@
       gap: 10px;
     }
 
-    .inputAnchor{
+    .p_1{
         position: absolute;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        top: 92px;
+        top: 56px;
         left: -16px;
     }
+    .p_2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 50px;
+        right: -14px;
+}
     #heading{
         display: flex;
         justify-content: center;
