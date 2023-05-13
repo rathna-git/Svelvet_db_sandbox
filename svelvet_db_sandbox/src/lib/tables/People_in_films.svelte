@@ -5,7 +5,7 @@
   <Node  useDefaults id='people_in_films' position={{x:700, y:-300}}>
     <div class='nodeWrapper'>
       <div class='p_1'>
-        <Anchor input></Anchor>
+        <Anchor input direction='west' connections={[['people', 'people_anchor2']]}></Anchor>
       </div>
     <div id='container'>
       <div id='heading'>People in Films</div>
@@ -18,17 +18,17 @@
           <tr>
              <td>person_id</td>
              <td>bigint</td> 
-             <td></td>  
+             <td>not null</td>  
           </tr>
           <tr>
             <td>film_id</td>
             <td>bigint</td> 
-            <td></td>  
+            <td>not null</td>  
          </tr>
       </table>
     </div>
     <div class='p_2'>
-    <Anchor input></Anchor>
+    <Anchor input direction='east' connections={[['films', 'films_anchor1']]}></Anchor>
     </div>
   </div>  
   </Node>
@@ -54,7 +54,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        top: 66px;
+        top: 52px;
         left: -16px;
     }
 

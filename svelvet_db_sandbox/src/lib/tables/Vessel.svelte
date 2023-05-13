@@ -16,7 +16,7 @@
           <tr>
               <td>name</td>
               <td>varchar</td>
-              <td></td>
+              <td>not null</td>
           </tr>
           <tr>
               <td>manufacturer</td>
@@ -31,12 +31,12 @@
         <tr>
           <td>vessel_type</td>
           <td>varchar</td>
-          <td></td>
+          <td>not null</td>
         </tr>
         <tr>
           <td>vessel_class</td>
           <td>varchar</td>
-          <td></td>
+          <td>not null</td>
         </tr>
         <tr>
           <td>cost_in_credits</td>
@@ -76,10 +76,10 @@
       </table>
     </div>
     <div class='p_1'>
-      <Anchor id='vessel_anchor1' output></Anchor>
+      <Anchor id='vessel_anchor1' output   direction="west"></Anchor>
     </div>
     <div class='p_2'>
-      <Anchor id='vessel_anchor2' connections={[['people','peopleAnchor']]} output></Anchor>
+      <Anchor id='vessel_anchor2' connections={[['people','peopleAnchor']]} output  direction="east"></Anchor>
     </div>   
   </div>
 </Node>

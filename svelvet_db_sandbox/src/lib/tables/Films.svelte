@@ -5,45 +5,45 @@
 <Node  useDefaults id='films' position={{x:1080, y:-300}}>
  <div class="nodeWrapper">
     <div class='p_1'>
-        <Anchor output id='films_anchor1'></Anchor>
+        <Anchor output id='films_anchor1' direction='west'></Anchor>
     </div>
     <div id=container>
         <div id='heading'>Films</div>
             <table id="filmsTable">
                 <tr>
                     <td>id</td>
-                    <td>bigint</td>
-                    <td>autoincrement()</td>
+                    <td>serial</td>
+                    <td>not null</td>
                  </tr>
                 <tr >
                     <td>title</td>
                     <td>varchar</td>
-                    <td></td>
+                    <td>not null</td>
                 </tr>
                 <tr >
                     <td>episode_id</td>
                     <td>varchar</td>
-                    <td></td>
+                    <td>not null</td>
                 </tr>
         <tr>
             <td>opening_crawl</td>
             <td>varchar</td>
-            <td></td>
+            <td>not null</td>
         </tr>
         <tr>
             <td>director</td>
             <td>varchar</td>
-            <td></td>
+            <td>not null</td>
         </tr>
         <tr>
             <td>producer</td>
             <td>varchar</td>
-            <td></td>
+            <td>not null</td>
         </tr>
         <tr>
             <td>release_date</td>
             <td>date</td>
-            <td></td>
+            <td>not null</td>
         </tr>
     </table>
 

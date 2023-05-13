@@ -5,10 +5,10 @@
   <Node  useDefaults id='pilot' position={{x:-300, y:300}}>
     <div class='nodeWrapper'>
       <div class='p_1'>
-        <Anchor  id='pilots_anchor1'connections={[['user', 'userAnchor']]} input></Anchor>
+        <Anchor  id='pilots_anchor1' connections={[['people', 'people_anchor1']]} input  direction="west"></Anchor>
         </div>
         <div class='p_2'>
-          <Anchor id='pilots_anchor2' connections={[['user', 'userAnchor']]} input></Anchor>
+          <Anchor id='pilots_anchor2' connections={[['vessel', 'vessel_anchor1']]} input  direction="west"></Anchor>
         </div>
     <div id='container'>
       <div id='heading'>Pilots</div>
@@ -21,12 +21,12 @@
           <tr>
              <td>person_id</td>
              <td>bigint</td> 
-             <td></td>  
+             <td>not null</td>  
           </tr>
           <tr>
             <td>vessel_id</td>
             <td>bigint</td> 
-            <td></td>  
+            <td>not null</td>  
          </tr>
       </table>
     </div>

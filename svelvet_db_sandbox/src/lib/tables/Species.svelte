@@ -5,13 +5,13 @@
 <Node  useDefaults id='species' position={{x:225, y:-250}}>
  <div class="nodeWrapper">
     <div class='p_1'>
-        <Anchor output id='species_anchor1'></Anchor>
+        <Anchor output id='species_anchor1' direction="west"></Anchor>
     </div>
     <div class='p_2'>
-        <Anchor output id='species_anchor2'></Anchor>
+        <Anchor output id='species_anchor2' direction="east"></Anchor>
     </div>
     <div class='p_3'>
-        <Anchor input id='species_anchor3'></Anchor>
+        <Anchor input id='species_anchor3' connections={[['planets', 'planets_anchor1']]} direction="west"></Anchor>
     </div>
     <div id=container>
         <div id='heading'>Species</div>
@@ -24,7 +24,7 @@
                 <tr >
                     <td>name</td>
                     <td>varchar</td>
-                    <td></td>
+                    <td>not null</td>
                 </tr>
                 <tr >
                     <td>classification</td>

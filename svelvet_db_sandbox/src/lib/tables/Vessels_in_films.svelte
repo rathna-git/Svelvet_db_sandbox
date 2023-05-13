@@ -5,30 +5,30 @@
   <Node  useDefaults id='vessels_in_films' position={{x:700, y:600}}>
     <div class='nodeWrapper'>
       <div class='p_1'>
-        <Anchor input></Anchor>
+        <Anchor input direction='west' connections={[['vessel', 'vessel_anchor2']]}></Anchor>
       </div>
     <div id='container'>
       <div id='heading'>Vessels in Films</div>
       <table id="vessels_filmsTable">
           <tr>
               <td>id</td>
-              <td>bigint</td> 
+              <td>serial</td> 
               <td>autoincrement()</td>     
           </tr>
           <tr>
              <td>vessel_id</td>
              <td>bigint</td> 
-             <td></td>  
+             <td>not null</td>  
           </tr>
           <tr>
             <td>film_id</td>
             <td>bigint</td> 
-            <td></td>  
+            <td>not null</td>  
          </tr>
       </table>
     </div>
     <div class='p_2'>
-    <Anchor input></Anchor>
+    <Anchor input direction='east'connections={[['films', 'films_anchor1']]}></Anchor>
     </div>
   </div>  
   </Node>
@@ -54,7 +54,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        top: 66px;
+        top: 52px;
         left: -16px;
     }
 

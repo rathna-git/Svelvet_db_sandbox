@@ -1,14 +1,15 @@
 <script>
     import {Node, Anchor} from 'svelvet';
+    import pkey from '../edges/PKEY.svelte';
 </script>
 <!-- bgColor='#f2fcff'  -->
 <Node  useDefaults id='people' position={{x:-300, y:-300}}>
  <div class="nodeWrapper">
     <div class='p_1'>
-        <Anchor output id='people_anchor1'></Anchor>
+        <Anchor output id='people_anchor1'  direction="west"></Anchor>
     </div>
     <div class='p_2'>
-        <Anchor output id='people_anchor2'></Anchor>
+        <Anchor output id='people_anchor2'  direction="east"></Anchor>
     </div>
     <div id=container>
         <div id='heading'>People</div>
@@ -21,7 +22,7 @@
                 <tr >
                     <td>name</td>
                     <td>varchar</td>
-                    <td></td>
+                    <td>not null</td>
                 </tr>
                 <tr >
                     <td>mass</td>
@@ -70,10 +71,10 @@
         </tr>
     </table>
     <div class="p_3">
-        <Anchor id='people_anchor3' input></Anchor>
+        <Anchor edge={pkey} id='people_anchor3' input connections={[['species', 'species_anchor1']]} direction="east"></Anchor>
     </div>
     <div class="p_4">
-        <Anchor id='people_anchor4' input></Anchor>
+        <Anchor edge={pkey} id='people_anchor4' input connections={[['planets', 'planets_anchor1']]} direction="east"></Anchor>
     </div>
 </div>
 

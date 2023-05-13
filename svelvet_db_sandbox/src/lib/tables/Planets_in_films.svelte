@@ -6,7 +6,7 @@
     <div id='container'>
       <div class='nodeWrapper'>
         <div class='p_1'>
-          <Anchor input></Anchor>
+          <Anchor input connections={[['planets', 'planets_anchor2']]}  direction="west"></Anchor>
         </div>
       <div id='heading'>Planets in Films</div>
       <table id="planets_filmsTable">
@@ -18,17 +18,17 @@
           <tr>
              <td>film_id</td>
              <td>bigint</td> 
-             <td></td>  
+             <td>not null</td>  
           </tr>
           <tr>
             <td>planet_id</td>
             <td>bigint</td> 
-            <td></td>  
+            <td>not null</td>  
          </tr>
       </table>
     </div>
     <div class='p_2'>
-    <Anchor input></Anchor>
+    <Anchor input connections={[['films', 'films_anchor1']]}  direction="east"></Anchor>
     </div>
   </div>  
   </Node>

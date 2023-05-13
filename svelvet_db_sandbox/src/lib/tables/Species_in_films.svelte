@@ -5,7 +5,7 @@
   <Node  useDefaults id='species_in_films' position={{x:700, y:0}}>
     <div class='nodeWrapper'>
       <div class='p_1'>
-        <Anchor input></Anchor>
+        <Anchor input connections={[['species', 'species_anchor2']]}  direction="west"></Anchor>
       </div>
     <div id='container'>
       <div id='heading'>Species in Films</div>
@@ -18,17 +18,17 @@
           <tr>
              <td>film_id</td>
              <td>bigint</td> 
-             <td></td>  
+             <td>not null</td>  
           </tr>
           <tr>
             <td>species_id</td>
             <td>bigint</td> 
-            <td></td>  
+            <td>not null</td>  
          </tr>
       </table>
     </div>
     <div class='p_2'>
-    <Anchor input></Anchor>
+    <Anchor input connections={[['films', 'films_anchor1']]} direction='east'></Anchor>
     </div>
   </div>  
   </Node>

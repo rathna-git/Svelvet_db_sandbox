@@ -5,15 +5,15 @@
   <Node  useDefaults id='starship' position={{x:225, y:300}}>
     <div class='nodeWrapper'>
       <div class='p_1'>
-        <Anchor id='vessel_anchor1' connections={[['user', 'userAnchor']]} input></Anchor>
+        <Anchor id='vessel_anchor1' connections={[['vessel', 'vessel_anchor2']]} input  direction="west"></Anchor>
       </div>
     <div id='container'>
       <div id='heading'>Starship Specs</div>
       <table id="starshipTable">
           <tr>
               <td>id</td>
-              <td>bigint</td> 
-              <td>autoincrement()</td>     
+              <td>serial</td> 
+              <td>not null</td>     
           </tr>
           <tr>
              <td>hyperdrive_rating</td>
@@ -28,7 +28,7 @@
          <tr>
             <td>vessel_id</td>
             <td>bigint</td> 
-            <td></td>  
+            <td>not null</td>  
          </tr>
       </table>
     </div>
